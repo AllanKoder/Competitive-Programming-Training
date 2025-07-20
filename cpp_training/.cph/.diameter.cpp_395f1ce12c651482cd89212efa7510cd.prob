@@ -1,0 +1,1 @@
+{"name":"Local: diameter","url":"c:\\Users\\HP\\wkspaces\\CompetitiveProgramming\\cpp\\diameter.cpp","tests":[{"id":1747539323827,"input":"10 8\n0 1\n1 2\n2 3\n3 4\n4 5\n3 6\n6 7\n7 8\n3 9\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\HP\\wkspaces\\CompetitiveProgramming\\cpp\\diameter.cpp","group":"local","local":true}

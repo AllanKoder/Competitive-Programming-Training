@@ -1,0 +1,1 @@
+{"name":"Local: main","url":"c:\\Users\\HP\\wkspaces\\cp\\main.py","tests":[{"id":1701384724759,"input":"4\n1\n10\n2\n4 6\n6\n2 1 2 1 2 1\n2\n0 32","output":"0\n2\n2 5\n1\n1\n6"},{"id":1701389832001,"input":"1\n3\n1 2 1 4 2 5","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\HP\\wkspaces\\cp\\main.py","group":"local","local":true}

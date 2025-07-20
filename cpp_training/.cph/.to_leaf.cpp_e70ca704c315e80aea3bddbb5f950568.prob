@@ -1,0 +1,1 @@
+{"name":"Local: to_leaf","url":"c:\\Users\\HP\\wkspaces\\CompetitiveProgramming\\cpp\\to_leaf.cpp","tests":[{"id":1747535891461,"input":"9 8\n1 2\n2 3\n3 4\n4 5\n3 6\n6 7\n7 8\n3 9","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\HP\\wkspaces\\CompetitiveProgramming\\cpp\\to_leaf.cpp","group":"local","local":true}
