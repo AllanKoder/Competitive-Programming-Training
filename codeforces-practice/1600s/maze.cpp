@@ -1,10 +1,19 @@
 #include <iostream>
 #include <algorithm>
 #include <vector>
-#include <set>
+#include <unordered_set>
 #include <queue>
 
 using namespace std;
+
+struct pair_hash
+{
+    size_t operator()(const pair<int,int>& pair) const noexcept
+    {
+        hash<int> f;
+        return f(pair.first) ^ (f(pair.second << 1));
+    }
+};
 
 vector<pair<int,int>> get_neighbours(int y, int x, int height, int width)
 {
@@ -48,7 +57,7 @@ int main()
 
     unsigned int keeping = period_count - k;
     unsigned int kept = 0;
-    set<pair<int,int>> visited;
+    unordered_set<pair<int,int>, pair_hash> visited;
 
     while (kept < keeping)
     {
