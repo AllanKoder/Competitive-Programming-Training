@@ -25,10 +25,10 @@ def best_in_range(l: int, r: int):
                 cand_prod = sub_prod
                 cand_num = sub_num
             else:
-                cand_prod = (d if sub_prod > 0 else d) * sub_prod if sub_prod else d
+                cand_prod = d * sub_prod if len(sub_num) > 0 else d
                 cand_num = str(d) + sub_num
 
-            if cand_prod > best[0] or (cand_prod == best[0] and cand_num > best[1]):
+            if cand_prod >= best[0]:
                 best = (cand_prod, cand_num)
 
         return best
