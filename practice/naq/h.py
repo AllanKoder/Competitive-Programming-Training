@@ -59,6 +59,7 @@ while abs(current_balance) >= epsilon:
     movement_direction = -(current_balance / person.weight)
     new_pos = movement_direction + person.position
 
+    print(person.position, current_balance, amount_moved)
     if direction_right:
         if not neighbor or new_pos <= neighbor.position:
             amount_moved += abs(movement_direction * person.people)
@@ -67,12 +68,15 @@ while abs(current_balance) >= epsilon:
         else:
             movement_amount = abs(neighbor.position - person.position)
             current_balance += movement_amount * person.weight
-            amount_moved += movement_amount
+            amount_moved += movement_amount * person.people
 
             neighbor.active = False
             person.active = False
 
             new_person = Person(person.left, neighbor.right, neighbor.position, neighbor.weight + person.weight, neighbor.people + person.people)
+            person.right = new_person
+            neighbor.left = new_person
+
             id_to_person[id(new_person)] = new_person
             heapq.heappush(heap, (-new_person.value, id(new_person)))
     if not direction_right:
@@ -83,12 +87,15 @@ while abs(current_balance) >= epsilon:
         else:
             movement_amount = abs(neighbor.position - person.position)
             current_balance -= movement_amount * person.weight
-            amount_moved += movement_amount
+            amount_moved += movement_amount * person.people
 
             neighbor.active = False
             person.active = False
 
             new_person = Person(neighbor.left, person.right, person.position, neighbor.weight + person.weight, neighbor.people + person.people)
+            neighbor.right = new_person
+            person.left = new_person
+
             id_to_person[id(new_person)] = new_person
             heapq.heappush(heap, (-new_person.value, id(new_person)))
     

@@ -1,0 +1,1 @@
+{"name":"Local: e","url":"c:\\Users\\HP\\wkspaces\\CompetitiveProgramming\\kattis-coaching\\week_5\\e.py","tests":[{"id":1760571703330,"input":"3\n1 3 9\n2 2 16\n5 2 11\n","output":"3\n4\n2\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\HP\\wkspaces\\CompetitiveProgramming\\kattis-coaching\\week_5\\e.py","group":"local","local":true}
