@@ -3,7 +3,7 @@ using namespace std;
 
 struct MaxTree {
     typedef pair<int, int> T;
-    static constexpr int INF = 1e9;
+    static constexpr int INF = INT_MAX;
     static constexpr T unit = {-INF, -1};
     T f(T a, T b) {
         if (a.first > b.first || (a.first == b.first && a.second >= b.second))
@@ -28,7 +28,7 @@ struct MaxTree {
 
 struct MinTree {
     typedef pair<int, int> T;
-    static constexpr int INF = 1e9;
+    static constexpr int INF = INT_MAX;
     static constexpr T unit = {INF, -1};
     T f(T a, T b) {
         if (a.first < b.first || (a.first == b.first && a.second <= b.second))

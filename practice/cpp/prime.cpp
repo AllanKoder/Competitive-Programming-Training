@@ -63,7 +63,7 @@ int main() {
         ull g;
         cin >> g;
         if (g == 1) {
-            cout << 1 << "\n"; // only 1 way
+            cout << 1 << "\n";
             continue;
         }
 
