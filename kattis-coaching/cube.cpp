@@ -102,10 +102,14 @@ int main() {
                     cout << "can fold";
                     return 0;
                 }
+                else
+                {
+                    cout << "cannot fold";
+                    return 0;
+                }
             }
         }
     }
 
-    cout << "cannot fold";
 }
 
