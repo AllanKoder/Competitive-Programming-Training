@@ -22,7 +22,7 @@ def zFunction(s):
             r = i + z[i] - 1
 
     return z
-
+print(zFunction("baaaabaaaa"))
 
 
 def is_repeated(num: int):
