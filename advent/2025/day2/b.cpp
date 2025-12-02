@@ -24,12 +24,6 @@ std::vector<long long> z_function(std::string s)
             r = i + z[i] - 1;
         }
     }
-    std::cout << "val: " << s << " ";
-    for (auto c : z)
-    {
-        std::cout << c << " ";
-    }
-    std::cout << "\n";
     return z;
 }
 
@@ -47,7 +41,7 @@ bool is_repeated(std::string s)
 }
 
 int main() {
-    int total = 0;
+    long long total = 0;
     std::string a;
     std::getline(std::cin, a);
 
