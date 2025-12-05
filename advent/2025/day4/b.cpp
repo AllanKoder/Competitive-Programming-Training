@@ -4,8 +4,8 @@
 std::vector<std::pair<int,int>> neighbors(int y, int x, int COLS, int ROWS)
 {
     std::vector<std::pair<int,int>> output;
-    std::array<int, 8> dx = {-1, -1, -1, 0, 0, 1, 1, 1};
-    std::array<int, 8> dy = {-1, 0, 1, 1, -1, 1, 0, -1};
+    const std::array<int, 8> dx = {-1, -1, -1, 0, 0, 1, 1, 1};
+    const std::array<int, 8> dy = {-1, 0, 1, 1, -1, 1, 0, -1};
 
     for (int d = 0; d < dx.size(); d++)
     {
