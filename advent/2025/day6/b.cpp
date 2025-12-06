@@ -39,6 +39,7 @@ T accumulate_col(const std::vector<T>& vector, const std::string& oper)
     else
     {
         std::cout << "NO OPERATOR FOUND\n";
+        throw;
     }
 
     return std::accumulate(vector.begin(), vector.end(), initial_val, func);
