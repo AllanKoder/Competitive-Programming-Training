@@ -83,36 +83,36 @@ bool rectangle_intersects_an_edge(
 
     for (const auto &e : edges)
     {
-        Pos a = e.from;
-        Pos b = e.to;
+        Pos e1 = e.from;
+        Pos e2 = e.to;
 
-        bool a_inside = inside(a);
-        bool b_inside = inside(b);
+        bool a_inside = inside(e1);
+        bool b_inside = inside(e2);
 
         if (a_inside || b_inside)
             return true;
 
-        // Horizontal edge: y = a.y, x from a.x to b.x
-        if (a.y == b.y)
+        // Horizontal edge: y = e1.y, x from e1.x to e2.x
+        if (e1.y == e2.y)
         {
-            ull y = a.y;
+            ull y = e1.y;
             if (y < bottom || y > top)
                 continue; // no possible intersection vertically
 
-            ull x1 = std::min(a.x, b.x);
-            ull x2 = std::max(a.x, b.x);
+            ull x1 = std::min(e1.x, e2.x);
+            ull x2 = std::max(e1.x, e2.x);
 
             if (x2 >= left && x1 <= right)
                 return true;
         }
         else 
         {
-            ull x = a.x;
+            ull x = e1.x;
             if (x < left || x > right)
                 continue; 
 
-            ull y1 = std::min(a.y, b.y);
-            ull y2 = std::max(a.y, b.y);
+            ull y1 = std::min(e1.y, e2.y);
+            ull y2 = std::max(e1.y, e2.y);
 
             if (y2 >= bottom && y1 <= top)
                 return true;
